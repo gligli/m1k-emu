@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <in>machdep.c</in>
+      <in>main.cc</in>
+      <in>mc6809.cc</in>
+      <in>mc6809_X.cc</in>
+      <in>mc6809in.cc</in>
+      <in>mc6850.cc</in>
+      <in>misc.cc</in>
+      <in>term.cc</in>
+      <in>usim.cc</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>usim.exe</executablePath>
+          <cTool>
+            <incDir>
+              <pElem></pElem>
+            </incDir>
+          </cTool>
+          <ccTool>
+            <incDir>
+              <pElem></pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="machdep.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="mc6809.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="mc6809_X.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="mc6809in.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="mc6850.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="misc.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="term.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="usim.cc" ex="false" tool="1" flavor2="4">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
