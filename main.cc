@@ -129,8 +129,10 @@ Byte sys::read(Word addr)
 
 void sys::write(Word addr, Byte x)
 {
-	//if(addr>= 0x1000 && addr<0x1400) printf("W %04x %02x %04x\n",addr,x,pc);
-	//if(pc==0x894a || pc==0x894c) printf("W %04x %02x %04x\n",addr,x,pc);
+//	if(addr< 0x1000) printf("W %04x %02x %04x\n",addr,x,pc);
+//	if(pc==0x894a || pc==0x894c) printf("W %04x %02x %04x\n",addr,x,pc);
+
+	if(addr>=0x8000) printf("W %04x %02x %04x\n",addr,x,pc); // write rom (debug)
 	
 	switch(addr&0xe000)
 	{
@@ -471,7 +473,7 @@ int main(int argc, char *argv[])
 #define SS_G 8
 #define SS_DP 4
 
-#define QUANTUM 1000
+#define QUANTUM 100
 
 void sys::status(void)
 {
@@ -546,11 +548,11 @@ void sys::status(void)
 		{
 			for(int i=1;i<3;++i)
 				for(int j=0;j<3;++j)
-					printf("%dA%5dHz  ",j+3*(i-1)+1,2000000/timers[i].counter[j].inlatch);
+					printf("%dA %5.2fHz ",j+3*(i-1)+1,2000000.0/timers[i].counter[j].inlatch);
 			printf("\n");
 			for(int i=3;i<5;++i)
 				for(int j=0;j<3;++j)
-					printf("%dB%5dHz  ",j+3*(i-3)+1,2000000/timers[i].counter[j].inlatch);
+					printf("%dB %5.2fHz ",j+3*(i-3)+1,2000000.0/timers[i].counter[j].inlatch);
 			printf("\n");
 		}
 		
